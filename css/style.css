@@ -1,0 +1,374 @@
+/* General Settings */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Colors */
+
+:root {
+    --bg-color: #f7f1ea;
+    --surface-color: #fffdfb;
+    --text-color: #1f2937;
+    --muted-color: #5b6475;
+
+    --primary-color: #3c5a96;
+    --primary-hover: #2d477d;
+    --secondary-color: #d8a15d;
+    --btn-text: #ffffff;
+
+    --border-color: #e7d9c7;
+    --soft-color: #f2e8dc;
+
+    --shadow-color: rgba(31, 41, 55, 0.12);
+}
+
+
+/* Body */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f8f5f2 0%, #f3efe9 100%);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Container */
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* Header */
+
+.site-header {
+    padding-top: 35px;
+}
+
+.site-header h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 22px;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--secondary-color);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* About Section */
+
+.about-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 0;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 320px;
+}
+
+.profile-image img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 18px 30px var(--shadow-color);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.about-content p {
+    color: var(--muted-color);
+    margin-bottom: 14px;
+}
+
+
+/* Dark Mode Button */
+
+button {
+    margin-top: 12px;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--btn-text);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 10px 20px rgba(60, 90, 150, 0.22);
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--primary-hover), #bb7e35);
+    transform: translateY(-1px);
+}
+
+
+/* Skills Section */
+
+.skills-section {
+    padding: 30px 0 70px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted-color);
+}
+
+
+/* Cards */
+
+.cards-container {
+    display: flex;
+    gap: 24px;
+}
+
+.card {
+    flex: 1;
+    padding: 28px 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px var(--shadow-color);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background-color: var(--soft-color);
+}
+
+.card-number {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--soft-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card p {
+    color: var(--muted-color);
+    font-size: 15px;
+}
+
+
+/* Contact Section */
+
+.contact-section {
+    padding: 30px 0 75px;
+}
+
+.contact-form {
+    max-width: 580px;
+    margin: auto;
+    padding: 32px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+
+/* Footer */
+
+.site-footer {
+    padding: 24px 0;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.site-footer p {
+    color: var(--muted-color);
+    font-size: 14px;
+}
+
+
+/* Dark Mode */
+
+body.dark {
+    --bg-color: #0b1220;
+    --surface-color: #152235;
+    --text-color: #edf3ff;
+    --muted-color: #b4c2d8;
+
+    --primary-color: #8ab4ff;
+    --primary-hover: #6ea3ff;
+    --secondary-color: #f0b668;
+    --btn-text: #101827;
+
+    --border-color: #2b3a52;
+    --soft-color: #1f2f46;
+
+    --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+body.dark {
+    background: linear-gradient(180deg, #0b1220 0%, #111b2d 100%);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        border-radius: 16px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .about-content h2 {
+        font-size: 26px;
+    }
+
+    .profile-image {
+        width: 240px;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 290px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
